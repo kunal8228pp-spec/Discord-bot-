@@ -1,0 +1,37 @@
+# Python 3.10+ recommended
+# Install with: python -m pip install -r requirements.txt
+discord.py>=2.4,<3
+aiohttp
+aiofiles
+aiosqlite
+Quart
+jishaku
+mcstatus
+psutil
+requests
+pymongo
+motor
+wavelink>=3.4,<4
+Augmentor
+numpy
+gTTS
+langdetect
+python-dotenv
+pyttsx3
+PyYAML
+openai
+duckduckgo-search==6.3.6
+colorama
+chess
+python-dateutil
+deep-translator==1.11.4
+uvicorn
+fastapi
+slowapi
+pycloudflared
+Pillow
+pytz
+prodia
+google-generativeai
+typing-extensions
+git+https://github.com/Rapptz/discord-ext-menus

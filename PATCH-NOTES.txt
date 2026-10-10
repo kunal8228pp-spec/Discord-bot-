@@ -1,0 +1,11 @@
+SETUP / REPAIR NOTES
+====================
+- Added Windows setup and launch scripts for bot and dashboard.
+- Replaced sample environment files with placeholders; removed prefilled owner IDs and weak default API key values.
+- Cleaned requirements.txt by removing standard-library names and invalid package aliases; added project imports used by features.
+- Fixed duplicate Next.js config files by consolidating configuration into next.config.mjs.
+- Renamed a binary-corrupted, unused leveling_original.py backup to .py.disabled; active leveling.py remains in place.
+- Removed automatic pip installation from the paginator import path; missing dependency now reports a clear installation instruction.
+- Replaced unrestricted eval() in calculator with a constrained arithmetic evaluator.
+
+Validation performed: Python source compile check passed. The dashboard and Discord bot were not live-tested because valid Discord/OAuth/Lavalink credentials and a running Discord server were not provided.

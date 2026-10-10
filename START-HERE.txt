@@ -1,0 +1,30 @@
+ZYROX BOT + DASHBOARD — START HERE
+==================================
+
+This archive contains the existing ZyroX Discord bot (Python/discord.py), FastAPI API, and Next.js dashboard. It is not a hosted service; you must configure your own Discord application and run it on your computer/server.
+
+WINDOWS QUICK START
+1. Install Python 3.10+ and Node.js 18+.
+2. Double-click setup_windows.bat.
+3. Edit bot/.env:
+   - TOKEN: your bot token from Discord Developer Portal
+   - OWNER_IDS: your Discord user ID
+   - DASHBOARD_API_KEY: create a long random secret
+   - Lavalink values: only if you need music
+4. Edit dashboard/.env.local:
+   - use the exact same DASHBOARD_API_KEY value as bot/.env
+   - set Discord OAuth Client ID and Client Secret
+   - set NEXTAUTH_SECRET to a separate long random value
+   - add your Discord user ID to NEXT_PUBLIC_ADMIN_IDS
+5. In Discord Developer Portal > OAuth2, add this redirect URI for local use:
+   http://localhost:3000/api/auth/callback/discord
+6. Enable the required bot intents in Developer Portal (including Server Members and Message Content if your chosen features need them). Invite the bot with only the permissions its features require.
+7. Run run_bot_windows.bat, then run_dashboard_windows.bat in a second window. Open http://localhost:3000.
+
+IMPORTANT
+- Never share bot/.env or dashboard/.env.local. Never paste your bot token into public chats or GitHub.
+- The sample files contain placeholders; replace them with your own values before launch.
+- Music requires a reachable, compatible Lavalink v4 server and valid credentials. Cloudflare Tunnel is optional for local testing; enable/configure it only when deploying remotely.
+- Dashboard access/API wiring depends on matching environment values and OAuth setup. For production, use HTTPS, a unique API key, and restrict network access to the API.
+- No third party can start the bot for you from this ZIP. Hosting, Discord credentials, OAuth setup, and Lavalink credentials are yours to provide.
+- This setup bundle includes the existing source project and setup helpers; it has not been live-tested against your Discord server or credentials.
